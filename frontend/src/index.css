@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@layer base {
+    :root {
+        /* Primary Tech Blue with slight violet undertone - Modern AI aesthetic */
+        --primary: 230 60% 45%;
+        --primary-foreground: 230 60% 98%;
+        --primary-glow: 230 70% 65%;
+        
+        /* Warm Amber/Copper Accent - Innovation & Energy */
+        --accent: 25 75% 55%;
+        --accent-foreground: 25 10% 10%;
+        --accent-glow: 25 85% 70%;
+        
+        /* Elevated Neutrals - Warm Grey Background */
+        --background: 240 5% 96%;
+        --foreground: 240 10% 10%;
+        
+        /* Card and Surface */
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 10%;
+        
+        /* Secondary - Subtle tech tint */
+        --secondary: 230 30% 92%;
+        --secondary-foreground: 230 60% 20%;
+        
+        /* Muted elements */
+        --muted: 240 5% 88%;
+        --muted-foreground: 240 5% 45%;
+        
+        /* Borders and inputs */
+        --border: 240 6% 88%;
+        --input: 240 6% 88%;
+        --ring: 230 60% 45%;
+        
+        /* Popover */
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 10%;
+        
+        /* Destructive */
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        
+        /* Success for AI/ML theme */
+        --success: 142 76% 36%;
+        --success-foreground: 142 76% 98%;
+        
+        /* Custom Gradients */
+        --gradient-primary: linear-gradient(135deg, hsl(230 60% 45%) 0%, hsl(230 70% 65%) 100%);
+        --gradient-accent: linear-gradient(135deg, hsl(25 75% 55%) 0%, hsl(25 85% 70%) 100%);
+        --gradient-subtle: linear-gradient(180deg, hsl(240 5% 96%) 0%, hsl(240 5% 98%) 100%);
+        --gradient-hero: linear-gradient(135deg, hsl(230 60% 45% / 0.05) 0%, hsl(25 75% 55% / 0.05) 100%);
+        
+        /* Shadows */
+        --shadow-elegant: 0 10px 30px -10px hsl(230 60% 45% / 0.15);
+        --shadow-glow: 0 0 40px hsl(230 70% 65% / 0.2);
+        --shadow-card: 0 4px 20px -4px hsl(240 5% 10% / 0.08);
+        --shadow-accent: 0 8px 25px -5px hsl(25 75% 55% / 0.25);
+        
+        /* Animations */
+        --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-bounce: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        
+        --radius: 0.75rem;
+    }
+    
+    .dark {
+        --background: 230 20% 8%;
+        --foreground: 230 10% 98%;
+        
+        --primary: 230 70% 60%;
+        --primary-foreground: 230 60% 10%;
+        --primary-glow: 230 80% 75%;
+        
+        --accent: 25 85% 60%;
+        --accent-foreground: 25 10% 10%;
+        --accent-glow: 25 95% 80%;
+        
+        --card: 230 18% 12%;
+        --card-foreground: 230 10% 98%;
+        
+        --secondary: 230 30% 15%;
+        --secondary-foreground: 230 60% 90%;
+        
+        --muted: 230 15% 20%;
+        --muted-foreground: 230 10% 60%;
+        
+        --border: 230 15% 20%;
+        --input: 230 15% 20%;
+        --ring: 230 70% 60%;
+        
+        --popover: 230 18% 12%;
+        --popover-foreground: 230 10% 98%;
+        
+        --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+        --shadow-elegant: 0 10px 30px -10px hsl(230 70% 60% / 0.3);
+        --shadow-glow: 0 0 40px hsl(230 80% 75% / 0.3);
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Space Grotesk', sans-serif;
+    }
+}
+
+@layer utilities {
+    .text-gradient-primary {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .text-gradient-accent {
+        background: var(--gradient-accent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .shadow-elegant {
+        box-shadow: var(--shadow-elegant);
+    }
+    
+    .shadow-glow {
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .shadow-card {
+        box-shadow: var(--shadow-card);
+    }
+    
+    .shadow-accent {
+        box-shadow: var(--shadow-accent);
+    }
+    
+    .transition-smooth {
+        transition: var(--transition-smooth);
+    }
+    
+    .transition-bounce {
+        transition: var(--transition-bounce);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+}
+
+/* Selection color */
+::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Canvas for 3D */
+canvas {
+    display: block;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
