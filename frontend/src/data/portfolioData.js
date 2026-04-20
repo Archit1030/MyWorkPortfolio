@@ -5,7 +5,7 @@ export const personalInfo = {
   email: 'archit.badoni1015@gmail.com',
   phone: '+91-9997294048',
   location: 'Manipal University Jaipur',
-  photo: 'https://customer-assets.emergentagent.com/job_893046fd-c079-4735-9d41-0a1911fa8a15/artifacts/07pf4ftc_knjnjjnjnjnjn.jpeg',
+  photo: '/New_profile.png',
   resume: '/Resume_ArchitBadoni.pdf',
   links: {
     portfolio: 'https://jazzy-swan-29a4be.netlify.app/',
