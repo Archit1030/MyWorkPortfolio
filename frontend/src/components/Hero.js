@@ -101,7 +101,7 @@ export const Hero = () => {
                     src={personalInfo.photo}
                     alt={personalInfo.name}
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: '40% 20%' }}
+                    style={{ objectPosition: '30% 20%' }}
                   />
                 </div>
                 {/* Decorative rings */}
